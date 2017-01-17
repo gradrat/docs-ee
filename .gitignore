@@ -1,0 +1,6 @@
+# Temporary Files
+*~
+.DS_Store
+
+# Sphinx Documentation
+docs/_build/
