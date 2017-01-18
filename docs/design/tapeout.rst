@@ -9,7 +9,7 @@ Major Milestones
 
 The major milestones for each project may differ slightly based on the goals of the tapeout, but the following list should be a basis to start from.
 
-Pass Architecture Design Review
+Architecture Design Review
 --------------------------------
 
 * Choose architecture to address design needs/goals
@@ -17,7 +17,7 @@ Pass Architecture Design Review
 * Generate system and block-level specifications
 * Document architecture, assumptions, and requirements
   
-Pass Schematic/RTL Design Review
+Schematic/RTL Design Review
 ---------------------------------
 
 This should happen for each block in the system. This milestone will not have been reached until every block (or an encapsulating block) in the chip passes a design review.
@@ -26,7 +26,7 @@ This should happen for each block in the system. This milestone will not have be
 * Simulation results show required performance or functionality is being met
 * Document design including decisions, assumptions and key results
 
-Pass Post Layout Design Review
+Post Layout Design Review
 ------------------------------
 
 All requirements for the the Schematic/RTL review should be repeated for the layout design.  Additionally, the following requirements should be met.
@@ -35,7 +35,7 @@ All requirements for the the Schematic/RTL review should be repeated for the lay
 * Review of any special layout requirements (metalization, matching, power, signal access)
 * Confirmation that the design meets timing and edge rate requirements
 
-Pass Top Level Verification
+Top Level Verification
 ----------------------------
 
 Once the entire chip design has been constructed (even if only as models), a suite of regression tests should begin being developed. These tests should continually be revised/improved and run as the design progresses. 
@@ -43,7 +43,7 @@ Once the entire chip design has been constructed (even if only as models), a sui
 Design Reviews
 ==============
 
-The guideline for things to review for each block can be found in the digital (:ref:`Digital_Design_Review`) and analog (:ref:`Analog_Design_Review`) workflows.
+The guideline for things to review for each block can be found in the digital (:ref:`Digital_Design_Review`) and analog (:ref:`Analog_Design_Review`) design sections.
 
 
 Final Tapeout Checklist
@@ -92,7 +92,7 @@ Layout
 * Check DRC
 
     - All required DRC rules should pass
-    - Any waived DRC rules should be marked in a DRC waiver list and noted as to why the DRC rule is waived (`example <https://docs.google.com/spreadsheets/d/14WR3C4LZAJy3kOAlpGJr50J7Sr2TJML3L8LNtrF5k0o/edit#gid=0>`_)
+    - Any waived DRC rules should be marked in a DRC waiver list and noted as to why the DRC rule is waived
 
 * Check LVS
 
@@ -103,8 +103,8 @@ Layout
 
 * Check Metal Integrity
 
-    - Check that any high current nets (power, ground, high power inputs/outputs) have maximally connected metal.  You can use the :ref:`Via_Finder` and :ref:`Via_Insertion` tool for this purpose.
-    - Check the resistivity of any critical nets that must carry high current using the `resistance visualization tool <http://docs.lionsemi.local/docs/parasitic-r-visualization/en/latest/parasitic_R/usage.html>`_.
+    - Check that any high current nets (power, ground, high power inputs/outputs) have maximally connected metal.  You can use a :ref:`Via_Finder` and :ref:`Via_Insertion` tool for this purpose.
+    - Check the resistivity of any critical nets that must carry high current using a resistance visualization tool (e.g. R3D, P2P, etc...)
       
 I/O and ESD
 -----------
